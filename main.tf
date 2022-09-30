@@ -25,7 +25,6 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   //ami = "" // NO ES ELEGANTE!
   instance_type = "t2.micro"
-  key_name = "rockemsockem"
 
   tags = {
     Name = "web-server"
