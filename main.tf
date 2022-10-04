@@ -22,13 +22,12 @@ provider "aws" {
 }*/
 
 resource "aws_instance" "web" {
-  name          = JuanPablo
-  #ami           = data.aws_ami.ubuntu.id
+  ami           = data.aws_ami.ubuntu.id
   //ami = "" // NO ES ELEGANTE!
   instance_type = "t2.micro"
 
   tags = {
-    Name = "web-server-01S"
+    Name = "JuanPablo"
   }
 }
 
