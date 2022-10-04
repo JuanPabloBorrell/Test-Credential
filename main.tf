@@ -5,7 +5,7 @@ provider "aws" {
   secret_key = ""
 }
 
-data "aws_ami" "ubuntu" {
+/* data "aws_ami" "ubuntu" {
   most_recent = true
 
   filter {
@@ -19,10 +19,11 @@ data "aws_ami" "ubuntu" {
   }
 
   owners = ["099720109477"] # Canonical
-}
+}*/
 
 resource "aws_instance" "web" {
-  ami           = data.aws_ami.ubuntu.id
+  name          = JuanPablo
+  #ami           = data.aws_ami.ubuntu.id
   //ami = "" // NO ES ELEGANTE!
   instance_type = "t2.micro"
 
