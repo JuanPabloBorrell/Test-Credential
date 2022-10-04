@@ -22,7 +22,8 @@ provider "aws" {
 }*/
 
 resource "aws_instance" "web" {
-  ami           = data.aws_ami.ubuntu.id
+  #ami           = data.aws_ami.ubuntu.id
+  ami           = 1980
   //ami = "" // NO ES ELEGANTE!
   instance_type = "t2.micro"
 
